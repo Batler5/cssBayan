@@ -19,6 +19,7 @@ label {
     padding: auto;
     transition: 0.7s;
     position: relative;
+    text-align: center
 }
 
 label::after{
@@ -40,7 +41,7 @@ label:hover {
 .content {
     cursor: pointer;
     overflow: hidden;
-    display:center;
+    margin: auto;
 }
 
 input + label + .content {
@@ -56,6 +57,11 @@ input:checked + label + .content {
     width: 50%;
 }
 
+img.display{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
 
 
 
