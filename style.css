@@ -1,0 +1,25 @@
+.container{
+    width:800px;
+    height:600px;
+    cursor: pointer;
+    background-color: rgb(77, 83, 42);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text1, .text2{
+    font-size: 25px;
+    width: 25px;
+    transition: 0,5s;
+    color:blue
+}
+.text1:hover, .text2:hover{
+    color:red;
+}
+
+.image{
+    width: 300px;
+    height: 300px;
+}
+
