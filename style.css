@@ -1,25 +1,39 @@
+body{
+    background-color:aquamarine;
+}
 .container{
     width:800px;
-    height:600px;
+    height:800px;
     cursor: pointer;
     background-color: rgb(77, 83, 42);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    padding-bottom: 100%;    
 }
+
 .text1, .text2{
-    font-size: 25px;
-    width: 25px;
-    transition: 0,5s;
-    color:blue
+    cursor: pointer;
+    position: relative;
+    color:black;
 }
 .text1:hover, .text2:hover{
+    cursor: pointer;
     color:red;
+    transition: 0.7s;
+}
+.Text1Content, .Text2Content {
+    position: relative;
+    visibility: hidden;
+    max-height: 0;
+}
+.text1:hover >.text1Content{
+    visibility: visible;
+    position: relative;
+}
+.text2:hover >.Text2Content{
+    visibility: visible;
+    position: relative;
 }
 
-.image{
-    width: 300px;
-    height: 300px;
-}
-
+/* CSSbayan=container
+cssbayan-bayan=text1
+CSSbayan_bayan-content=text1Content */
