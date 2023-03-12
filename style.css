@@ -1,66 +1,103 @@
 body{
+    padding: 0;
+    margin: 0;
     background-color:rgb(18, 77, 67);
 }
+.header {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.separator {
+    margin: 10px 20px;
+}
+
 .container{ 
+    width:100%;
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    position:absolute;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 2;
-    width:1000px;
-    height:4500px;
-    /* cursor: pointer; */
-    background-color: rgb(43, 43, 43);
+}
+
+.CSSbayanContainer {
     margin: auto;
-    /* padding-bottom: 100%; */
-    display: block;
-    /* align-items:center; */
-    padding: 0 0 0 1.2em;
+    padding-bottom: 100%;
+}
+
+.CSSbayan {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1%;
+    overflow: hidden;
 }
 
 input {
     display: none;
 }
+
 label {
-    align-items:center;
+    /* display: block;
+    position: inherit;
     cursor: pointer;
-    display: block;
-    width: 900px;
-    /* padding: center; */
     transition: 0.7s;
     background-color:rgb(122, 121, 122);
-    padding: 0 0 0 5em;
-   border-radius: 10px;
-}
-.content {
-    /* visibility: hidden; */
-    cursor: pointer;
-    overflow: hidden;
-    margin: auto;
+    border-radius: 10px; */
+    
     position: relative;
+    display: block;
+    background-color:rgb(122, 121, 122);
+    padding: 0 0 0 1em;    
+    font-weight: bold;
+    line-height: 3;    
+    cursor: pointer;
 }
-label::after{
-    /* display: block; */
-	/* font-weight: bold;
-    font-size: 22px;
-    font-weight: bold; */
+
+label > h1::after{
+    margin: auto;
+    content: '+';
+    width: 2.25em;
+    height: 2.25em;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, -50%);    
     position: absolute;
-    /* right: 1vh;
-    top: 0.5vh; */
-}
-input:checked + label::after {
+    transform: rotate(0deg);    
 	font-weight: bold;
-    visibility: visible;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 1.3s;
+
 }
 
 label:hover {
     color:aquamarine;
 }
 
-
-
 input + label + .content {
     display: none;
 }
 
+input:checked + label > h1::after {
+    transform: rotate(500deg);
+    transition: 1.3s;
+}
+
+input:checked + label::after {
+    font-weight: bold;
+}
+
 input:checked + label + .content {
+    max-height: 100vh;
     display: block;
 }
 
@@ -68,10 +105,17 @@ input:checked + label + .content {
     height: auto;
     width: 980px;
     border-radius:10px;
+
 }
 
 img.display{
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+
+.content img{
+    max-width: 100%;
+    max-height: 100vh;
+    height: auto;
 }
