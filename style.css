@@ -1,12 +1,8 @@
-* {
+body{
     padding: 0;
     margin: 0;
-}
-
-body {
     background-color:rgb(18, 77, 67);
 }
-
 .header {
     position: relative;
     width: 100%;
@@ -26,7 +22,6 @@ body {
 .container{ 
     width:100%;
     background-color: rgb(43, 43, 43);
-
     display: flex;
     position:absolute;
     font-family: Arial, Helvetica, sans-serif;
@@ -42,7 +37,6 @@ body {
     position: relative;
     width: 100%;
     margin-bottom: 1%;
-
     overflow: hidden;
 }
 
@@ -53,21 +47,17 @@ input {
 label {
     /* display: block;
     position: inherit;
-
     cursor: pointer;
     transition: 0.7s;
     background-color:rgb(122, 121, 122);
     border-radius: 10px; */
-
+    
     position: relative;
     display: block;
     background-color:rgb(122, 121, 122);
-
-    padding: 0 0 0 1em;
-    
+    padding: 0 0 0 1em;    
     font-weight: bold;
-    line-height: 3;
-    
+    line-height: 3;    
     cursor: pointer;
 }
 
@@ -76,19 +66,17 @@ label > h1::after{
     content: '+';
     width: 2.25em;
     height: 2.25em;
-
     top: 0;
     right: 0;
-    transform: translate(-50%, -50%);
-    
+    transform: translate(-50%, -50%);    
     position: absolute;
-    transform: rotate(0deg);
-    
+    transform: rotate(0deg);    
 	font-weight: bold;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
     transition: all 1.3s;
+
 }
 
 label:hover {
@@ -113,8 +101,11 @@ input:checked + label + .content {
     display: block;
 }
 
-.content {
-    max-height: 100vh;
+.content img{
+    height: auto;
+    width: 980px;
+    border-radius:10px;
+
 }
 
 img.display{
@@ -128,4 +119,3 @@ img.display{
     max-height: 100vh;
     height: auto;
 }
-
