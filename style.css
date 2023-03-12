@@ -6,13 +6,13 @@ body{
     line-height: 2;
     width:1000px;
     height:4500px;
-    cursor: pointer;
+    /* cursor: pointer; */
     background-color: rgb(43, 43, 43);
     margin: auto;
-    padding-bottom: 100%;  
+    /* padding-bottom: 100%; */
     display: block;
-    align-items:center;
-    padding: 0 0 0 1em;
+    /* align-items:center; */
+    padding: 0 0 0 1.2em;
 }
 
 input {
@@ -23,35 +23,38 @@ label {
     cursor: pointer;
     display: block;
     width: 900px;
-    padding: center;
+    /* padding: center; */
     transition: 0.7s;
     background-color:rgb(122, 121, 122);
     padding: 0 0 0 5em;
    border-radius: 10px;
 }
-
+.content {
+    /* visibility: hidden; */
+    cursor: pointer;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
 label::after{
-    display: block;
-	font-weight: bold;
+    /* display: block; */
+	/* font-weight: bold;
     font-size: 22px;
-    font-weight: bold;
+    font-weight: bold; */
     position: absolute;
-    right: 1vh;
-    top: 0.5vh;
+    /* right: 1vh;
+    top: 0.5vh; */
 }
 input:checked + label::after {
 	font-weight: bold;
+    visibility: visible;
 }
 
 label:hover {
     color:aquamarine;
 }
 
-.content {
-    cursor: pointer;
-    overflow: hidden;
-    margin: auto;
-}
+
 
 input + label + .content {
     display: none;
