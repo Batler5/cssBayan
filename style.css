@@ -65,12 +65,8 @@ label > h1::after{
     font-size: 32px;
     font-weight: bold;
     text-align:center;
-    transition-delay: 0ms;
-    transition: 0.7s;
-    /* width: 2.25em;
-    height: 2.25em; 
-    top: 0;
-     transform: translate(-50%, -50%);     */
+    transition-property: transform, background-color;
+    transition-duration: 0.7s, 0s;
 }
 
 label:hover {
@@ -83,8 +79,6 @@ input + label + .content {
 
 input:checked + label > h1::after {
     transform: rotate(500deg);
-    transition-delay: 0;
-    transition: 0.7s;
 }
 
 input:checked + label::after {
@@ -103,14 +97,21 @@ input:checked + label + .content {
     max-width: 100%;
     max-height: 100vh;
     height: auto;
-    transition-delay: 0ms;
-    transition: 0.7s;
-    /* transition: 0.7s; */
+    transition-property:inherit;
+    transition-duration: 1s;
+    animation: wathcingMem 1s;
 }
 
 img.display{
     display: block;
     margin-left: auto;
-    margin-right: auto
-    /* transition: 0.7s; */
+    margin-right: auto;
+}
+@keyframes wathcingMem{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
 }
