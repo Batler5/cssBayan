@@ -27,6 +27,7 @@ body{
 .CSSbayanContainer {
     margin: auto;
     padding-bottom: 100%;
+    width: 900px;
 }
 
 .CSSbayan {
@@ -41,8 +42,9 @@ input {
 }
 
 label {
-    width: 965px;
+    width: 98%;
     border-radius: 10px; 
+    transition-delay:0ms;
     transition: 0.7s;
     position: relative;
     display: block;
@@ -53,22 +55,22 @@ label {
     cursor: pointer;
 }
 
-label > h1::after{
+label > h1::after{        
+    right: 25px;
     margin: auto;
     content: '+';
-    /* width: 2.25em;
-    height: 2.25em; 
-    top: 0;*/
-    right: 25px;
-    /* transform: translate(-50%, -50%);     */
     position: absolute;
     transform: rotate(0deg);    
 	font-weight: bold;
     font-size: 32px;
     font-weight: bold;
     text-align:center;
+    transition-delay: 0ms;
     transition: 0.7s;
-
+    /* width: 2.25em;
+    height: 2.25em; 
+    top: 0;
+     transform: translate(-50%, -50%);     */
 }
 
 label:hover {
@@ -81,6 +83,7 @@ input + label + .content {
 
 input:checked + label > h1::after {
     transform: rotate(500deg);
+    transition-delay: 0;
     transition: 0.7s;
 }
 
@@ -95,9 +98,14 @@ input:checked + label + .content {
 
 .content img{
     height: auto;
-    width: 980px;
+    width: 100%;
     border-radius:10px;
     /* transition: 0.7s; */
+    max-width: 100%;
+    max-height: 100vh;
+    height: auto;
+    transition-delay: 0ms;
+    transition: 0.7s;
 }
 
 img.display{
@@ -105,11 +113,4 @@ img.display{
     margin-left: auto;
     margin-right: auto
     /* transition: 0.7s; */
-}
-
-.content img{
-    max-width: 100%;
-    max-height: 100vh;
-    height: auto;
-    transition: 0.7s;
 }
